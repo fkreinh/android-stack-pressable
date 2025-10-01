@@ -13,19 +13,19 @@ This issue is related to how native view containers handle touch events on Andro
 1. Install dependencies:
 
    ```bash
-   npm install
+   bun install
    ```
 
 2. Prebuild the native code:
 
    ```bash
-   npx expo prebuild
+   bun expo prebuild
    ```
 
 3. Run on Android device:
 
    ```bash
-   npx expo run:android
+   bun expo run:android
    ```
 
 4. Test the Pressables:
