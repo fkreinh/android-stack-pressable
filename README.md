@@ -42,7 +42,7 @@ https://expo.dev/accounts/felipe-krein/projects/android-stack-pressable/builds/5
 - React Native: 0.81.4
 - Expo: ~54.0.11
 - @lodev09/react-native-true-sheet: ^2.0.6
-- react-native-screens: nightly
+- react-native-screens: nightly (4.17.0-nightly-20250930-6525eabd8)
 
 ## Expected Behavior
 
