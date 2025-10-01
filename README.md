@@ -10,6 +10,10 @@ This issue is related to how native view containers handle touch events on Andro
 
 ## Quick Test
 
+**Video Demo:**
+https://www.loom.com/share/f8b7177fd2d7436c9097ae003923601b?sid=2df58faf-74da-475d-aa92-360748c16fde
+
+**Download APK:**
 Download and install the APK to test on your Android device:
 https://expo.dev/accounts/felipe-krein/projects/android-stack-pressable/builds/50ed961d-959e-4bbd-a5cd-39e7fc1578a5
 
@@ -56,3 +60,4 @@ The Pressable inside the TrueSheet bottom sheet does not respond to touch events
 
 - https://github.com/lodev09/react-native-true-sheet/issues/163
 - https://github.com/software-mansion/react-native-screens/issues/2219
+- https://github.com/software-mansion/react-native-screens/pull/3239
