@@ -1,50 +1,53 @@
-# Welcome to your Expo app 👋
+# Pressable Bug Demo - TrueSheet Android Issue
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This repository demonstrates a bug where `Pressable` components do not work properly on Android devices when placed inside TrueSheet bottom sheets.
 
-## Get started
+## Bug Description
 
-1. Install dependencies
+When a `Pressable` component is rendered inside a `@lodev09/react-native-true-sheet` bottom sheet, it fails to respond to touch events on Android physical devices (works fine on emulators and iOS).
+
+This issue is related to how native view containers handle touch events on Android.
+
+## Reproduction
+
+1. Install dependencies:
 
    ```bash
    npm install
    ```
 
-2. Start the app
+2. Prebuild the native code:
 
    ```bash
-   npx expo start
+   npx expo prebuild
    ```
 
-In the output, you'll find options to open the app in a
+3. Run on Android device:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+   ```bash
+   npx expo run:android
+   ```
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+4. Test the Pressables:
+   - **Outside Bottom Sheet**: Pressable works correctly ✅
+   - **Inside Bottom Sheet** (tap "Open Bottom Sheet"): Pressable does not respond on Android device ❌
 
-## Get a fresh project
+## Environment
 
-When you're ready, run:
+- React Native: 0.81.4
+- Expo: ~54.0.11
+- @lodev09/react-native-true-sheet: ^2.0.6
+- react-native-screens: nightly
 
-```bash
-npm run reset-project
-```
+## Expected Behavior
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Both Pressable components should respond to touch events on all platforms.
 
-## Learn more
+## Actual Behavior
 
-To learn more about developing your project with Expo, look at the following resources:
+The Pressable inside the TrueSheet bottom sheet does not respond to touch events on Android physical devices.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Related Issues
 
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- https://github.com/lodev09/react-native-true-sheet/issues/163
+- https://github.com/software-mansion/react-native-screens/issues/2219
