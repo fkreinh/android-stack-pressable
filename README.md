@@ -8,6 +8,11 @@ When a `Pressable` component is rendered inside a `@lodev09/react-native-true-sh
 
 This issue is related to how native view containers handle touch events on Android.
 
+## Quick Test
+
+Download and install the APK to test on your Android device:
+https://expo.dev/accounts/felipe-krein/projects/android-stack-pressable/builds/50ed961d-959e-4bbd-a5cd-39e7fc1578a5
+
 ## Reproduction
 
 1. Install dependencies:
